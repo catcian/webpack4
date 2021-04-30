@@ -7,3 +7,5 @@ function SiderBar () {
   siderbar.innerHTML = 'siderbar'
   dom.appendChild(siderbar)
 }
+
+export default SiderBar

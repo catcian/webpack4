@@ -1,3 +1,7 @@
-new Header()
-new SiderBar()
-new Content()
+import Header from './header'
+import SiderBar from './siderbar'
+import Content from './content'
+
+Header()
+SiderBar()
+Content()

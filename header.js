@@ -7,3 +7,5 @@ function Header () {
   header.innerHTML = 'header'
   dom.appendChild(header)
 }
+
+export default Header

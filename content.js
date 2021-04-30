@@ -7,3 +7,5 @@ function Content () {
   content.innerHTML = 'content'
   dom.appendChild(content)
 }
+
+export default Content
