@@ -1,7 +1,10 @@
-import Header from './header'
-import SiderBar from './siderbar'
-import Content from './content'
+import avatar from './1.jpg'
 
-Header()
-SiderBar()
-Content()
+console.log(avatar)
+
+var img = new Image()
+img.src = avatar
+img.width = 100
+img.height = 100
+var root = document.getElementById('root')
+root.appendChild(img)
