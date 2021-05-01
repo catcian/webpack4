@@ -19,6 +19,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(css|scss|less)$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   },
