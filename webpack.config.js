@@ -28,12 +28,18 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-              modules: true
+              // modules: true
             }
           },
           'sass-loader',
           'postcss-loader'
         ]
+      },
+      {
+        test: /\.(ttf|woff|woff2)$/,
+        use: [{
+          loader: 'file-loader'
+        }]
       }
     ]
   },
