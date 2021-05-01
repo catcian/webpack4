@@ -8,13 +8,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jpg$/,
+        test: /\.(jpg|png|git)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               name: '[name]_[hash].[ext]',
-              outputPath: 'images'
+              outputPath: 'images',
+              limit: 20480,
             }
           }
         ]
@@ -23,6 +24,6 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'bundle')
+    path: path.resolve(__dirname, 'dist')
   }
 }
