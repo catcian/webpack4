@@ -9,7 +9,9 @@
     "bundle": "webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server",
-    "middleware": "node server.js"
+    "middleware": "node server.js",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
