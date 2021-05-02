@@ -18,6 +18,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
         test: /\.(jpg|png|git)$/,
         use: [
           {
@@ -54,7 +61,6 @@ module.exports = {
     ]
   },
   output: {
-    publicPath: '/',
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },

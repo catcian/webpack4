@@ -11,7 +11,10 @@
     "middleware": "node server.js"
   },
   "devDependencies": {
+    "@babel/core": "7.2.0",
+    "@babel/preset-env": "7.2.0",
     "autoprefixer": "9.3.1",
+    "babel-loader": "8.0.4",
     "clean-webpack-plugin": "1.0.0",
     "css-loader": "1.0.1",
     "express": "4.16.4",
@@ -31,5 +34,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.2.3"
+  }
 }
