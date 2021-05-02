@@ -3,6 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
+/**
+  "presets": [["@babel/preset-env", {
+    "targets": {
+      "chrome": "67"
+    },
+    "useBuiltIns": "usage"
+  }]]
+ */
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-source-map',
