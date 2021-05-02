@@ -4,9 +4,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
+  devtool: 'cheap-module-source-map',
   entry: {
     main: './src/index.js',
-    sub: './src/index.js'
   },
   module: {
     rules: [
@@ -49,7 +49,6 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'https://cdn.com.cn'
   },
   plugins: [
     new HtmlWebpackPlugin({
