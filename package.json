@@ -9,12 +9,12 @@
     "*.css"
   ],
   "scripts": {
-    "bundle": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server",
+    "bundle": "webpack --config ./build/webpack.config.js",
+    "watch": "webpack --watch --config ./build/webpack.config.js",
+    "start": "webpack-dev-server --config ./build/webpack.config.js",
     "middleware": "node server.js",
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "prod": "webpack --config webpack.prod.js"
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "prod": "webpack --config ./build/webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
