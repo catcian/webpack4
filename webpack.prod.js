@@ -3,23 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
-/** .babelrc
-  "plugins": [["@babel/plugin-transform-runtime", {
-    "corejs": 2,
-    "helpers": true,
-    "regenerator": true,
-    "useESModules": true
-  }]]
 
-  "presets": [["@babel/preset-env", {
-    "targets": {
-      "chrome": "67"
-    },
-    "useBuiltIns": "usage"
-  }]]
- */
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   devtool: 'cheap-module-source-map',
   devServer: {
     contentBase: './dist',

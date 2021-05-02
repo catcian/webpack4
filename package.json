@@ -4,6 +4,7 @@
   "private": true,
   "author": "wangchen <wangchn86@163.com>",
   "license": "MIT",
+  "sideEffects": ["@babel/pollyfill", "*.css"],
   "scripts": {
     "bundle": "webpack",
     "watch": "webpack --watch",
