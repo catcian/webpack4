@@ -5,7 +5,8 @@
   "author": "wangchen <wangchn86@163.com>",
   "license": "MIT",
   "scripts": {
-    "bundle": "webpack"
+    "bundle": "webpack",
+    "watch": "webpack --watch"
   },
   "devDependencies": {
     "autoprefixer": "9.3.1",
