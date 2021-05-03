@@ -12,6 +12,6 @@
 // })
 
 
-import _ from 'lodash'
-
-console.log(_.join(['aaa','bbb']))
+// import _ from 'lodash'
+import { info } from './test'
+console.log(JSON.stringify(info))
