@@ -1,5 +1,4 @@
-import { add } from './math'
+import _ from 'lodash'
 
-add(1,2)
-add(5,4)
-console.log(123)
+const arr = _.join(['a', 'b', 'c'])
+console.log(arr)
