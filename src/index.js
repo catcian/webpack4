@@ -1,17 +1,17 @@
 
-function getComponent () {
-  return import('lodash').then(({default: _}) => {
-    var element = document.createElement('div')
-    element.innerHTML = _.join(['a','c','b'])
-    return element
-  })
-}
+// function getComponent () {
+//   return import('lodash').then(({default: _}) => {
+//     var element = document.createElement('div')
+//     element.innerHTML = _.join(['a','c','b'])
+//     return element
+//   })
+// }
 
-getComponent().then((element) => {
-  document.body.appendChild(elements)
-})
+// getComponent().then((element) => {
+//   document.body.appendChild(elements)
+// })
 
 
-// import _ from 'lodash'
+import _ from 'lodash'
 
-// console.log(_.join(['aaa','bbb']))
+console.log(_.join(['aaa','bbb']))
