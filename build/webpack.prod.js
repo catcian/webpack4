@@ -62,7 +62,10 @@ const prodConfig = {
     new OptimizeCssAssetsPlugin({})
   ],
   optimization: {
-    usedExports: true
+    usedExports: true,
+    splitChunks: {
+      chunks: 'all'
+    }
   }
 }
 
