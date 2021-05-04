@@ -54,7 +54,10 @@ const prodConfig = {
   },
   plugins: [
     new CleanWebpackPlugin([path.resolve(__dirname, '../dist')], {root: path.resolve(__dirname, '../')}),
-    new MiniCssExtractPlugin({})
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[name].chunk.css'
+    })
   ],
   optimization: {
     usedExports: true
