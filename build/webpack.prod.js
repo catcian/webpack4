@@ -3,6 +3,7 @@ const merge = require('webpack-merge')
 const commonConfig = require('./webpack.common')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const prodConfig = {
   mode: 'production',
@@ -57,7 +58,8 @@ const prodConfig = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].chunk.css'
-    })
+    }),
+    new OptimizeCssAssetsPlugin({})
   ],
   optimization: {
     usedExports: true
