@@ -1,13 +1,3 @@
-// 普通
-// document.addEventListener('click', () => {
-//   const element = document.createElement('div')
-//   element.innerHTML = '普通写法'
-//   document.body.appendChild(element)
-// })
+import './style.css'
 
-document.addEventListener('click', () => {
-  import(/* webpackPrefetch: true */'./click').then(({default: func}) => {
-    func()
-  })
-})
-
+console.log('css codeSplitting')
