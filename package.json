@@ -9,13 +9,13 @@
     "*.css"
   ],
   "scripts": {
-    "bundle": "webpack --profile --json > stats.json --config ./build/webpack.config.js",
+    "bundle": "webpack --config ./build/webpack.config.js",
     "watch": "webpack --watch --config ./build/webpack.config.js",
     "start": "webpack-dev-server --config ./build/webpack.config.js",
     "middleware": "node server.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
     "prod": "webpack --config ./build/webpack.prod.js",
-    "analyzer": "webpack-bundle-analyzer ./stats.json dist/"
+    "analyzer": "webpack --profile --json > stats.json && webpack-bundle-analyzer ./stats.json dist/"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",

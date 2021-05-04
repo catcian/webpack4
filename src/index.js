@@ -1,15 +1,13 @@
-
-async function getComponent () {
-  const {default: _} = await import(/* webpackChunkName: "lodash"*/'lodash')
-  const element = document.createElement('div')
-  element.innerHTML = _.join(['a','b','c'])
-  return element 
-  }
-
+// 普通
+// document.addEventListener('click', () => {
+//   const element = document.createElement('div')
+//   element.innerHTML = '普通写法'
+//   document.body.appendChild(element)
+// })
 
 document.addEventListener('click', () => {
-  getComponent().then((element) => {
-    document.body.appendChild(element)
+  import('./click').then(({default: func}) => {
+    func()
   })
 })
 
