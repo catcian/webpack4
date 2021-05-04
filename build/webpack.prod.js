@@ -65,6 +65,9 @@ const prodConfig = {
     usedExports: true,
     splitChunks: {
       chunks: 'all'
+    },
+    runtimeChunk: {
+      name: 'runtime'
     }
   }
 }
