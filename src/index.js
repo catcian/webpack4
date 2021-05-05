@@ -1,7 +1,5 @@
-import Header from './header'
-import SiderBar from './siderbar'
-import Content from './content'
+import $ from 'jquery'
 
-Header()
-SiderBar()
-Content()
+const div = $('div').html('div lalala')
+$('body').append(div)
+console.log(this === window)
