@@ -1,5 +1,4 @@
-import $ from 'jquery'
+import * as math from './math'
+import * as string from './string'
 
-const div = $('div').html('div lalala')
-$('body').append(div)
-console.log(this === window)
+export default {math, string}
