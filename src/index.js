@@ -1,5 +1,14 @@
-import $ from 'jquery'
+console.log('hello Progressive Web Application')
 
-const div = $('div').html('div lalala')
-$('body').append(div)
-console.log(this === window)
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(registration => {
+      console.log('service-worker registed')
+    })
+    .catch(error => {
+      console.log('service-worker registe error')
+    })
+  })
+}

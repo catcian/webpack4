@@ -2,6 +2,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const merge = require('webpack-merge')
+const commonConfig = require('./webpack.common')
+const WorkBoxPlugin = require('workbox-webpack-plugin')
 
 const prodConfig = {
   mode: 'production',
@@ -57,7 +60,11 @@ const prodConfig = {
       filename: '[name].css',
       chunkFilename: '[name].chunk.css'
     }),
-    new OptimizeCssAssetsPlugin({})
+    new OptimizeCssAssetsPlugin({}),
+    new WorkBoxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    })
   ],
   optimization: {
     usedExports: true,
@@ -70,4 +77,4 @@ const prodConfig = {
   }
 }
 
-module.exports = prodConfig
+module.exports = merge(commonConfig, prodConfig)
