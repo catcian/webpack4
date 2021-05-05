@@ -35,9 +35,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use:[ 
+          {
+            loader: 'babel-loader'
+          }
+        ]
       },
       {
         test: /\.(jpg|png|git)$/,
@@ -84,7 +86,11 @@ module.exports = {
       template: path.resolve(__dirname, '../src/index.html')
     }),
     new CleanWebpackPlugin([path.resolve(__dirname, '../dist')], {root: path.resolve(__dirname, '../')}),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      _join: ['lodash', 'join']
+    })
   ],
   optimization: {
     usedExports: true,
