@@ -1,6 +1,4 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const merge = require('webpack-merge')
-const commonConfig = require('./webpack.common')
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -72,4 +70,4 @@ const prodConfig = {
   }
 }
 
-module.exports = merge(commonConfig, prodConfig)
+module.exports = prodConfig
