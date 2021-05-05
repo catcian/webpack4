@@ -9,4 +9,5 @@ module.exports = {
     library: 'library',
     libraryTarget: 'umd'
   },
+  externals: ['lodash']
 }
