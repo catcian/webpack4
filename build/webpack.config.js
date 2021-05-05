@@ -38,6 +38,9 @@ module.exports = {
         use:[ 
           {
             loader: 'babel-loader'
+          },
+          {
+            loader: 'imports-loader?this=>window'
           }
         ]
       },
