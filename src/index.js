@@ -1,7 +1,14 @@
-import Header from './header'
-import SiderBar from './siderbar'
-import Content from './content'
+console.log('hello Progressive Web Application')
 
-Header()
-SiderBar()
-Content()
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(registration => {
+      console.log('service-worker registed')
+    })
+    .catch(error => {
+      console.log('service-worker registe error')
+    })
+  })
+}
