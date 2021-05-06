@@ -1,12 +1,13 @@
 const path = require('path')
 
 module.exports = {
-  mode: 'development',
-  entry: {
-    main: './src/index.js'
-  },
+  mode: 'production',
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'bundle')
-  }
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'library.js',
+    library: 'library',
+    libraryTarget: 'umd'
+  },
+  externals: ['lodash']
 }

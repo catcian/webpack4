@@ -1,7 +1,4 @@
-import Header from './header'
-import SiderBar from './siderbar'
-import Content from './content'
+import * as math from './math'
+import * as string from './string'
 
-Header()
-SiderBar()
-Content()
+export default {math, string}
