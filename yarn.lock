@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@types/lodash@4.14.119":
+  version "4.14.119"
+  resolved "https://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.119.tgz?cache=0&sync_timestamp=1613379158193&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.119.tgz#be847e5f4bc3e35e46d041c394ead8b603ad8b39"
+  integrity sha1-voR+X0vD415G0EHDlOrYtgOtizk=
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.7.11.tgz?cache=0&sync_timestamp=1610041484025&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webassemblyjs%2Fast%2Fdownload%2F%40webassemblyjs%2Fast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
@@ -1642,6 +1647,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash@4.17.11:
+  version "4.17.11"
+  resolved "https://registry.nlark.com/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
 
 lodash@^4.3.0:
   version "4.17.21"
