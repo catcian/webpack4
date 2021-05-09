@@ -8,13 +8,27 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: './src/index.js',
   devServer: {
+    index: 'index.html',
     contentBase: './dist',
     port: 3000,
     hot: true,
     hotOnly: true,
-    proxy: {
-      '/react/api': 'http://www.dell-lee.com',
-    }
+    headers: {
+      host: "http://8.129.91.9",
+      cookie: 'cookie'
+    },
+    proxy: [{
+        context: ['/auth', '/react/api'],
+        target: 'http://www.dell-lee.com',
+        secure: false,
+        pathRewrite: {
+          'header.json': 'demo.json'
+        },
+        bypass: function(req, res, proxyOptions) {
+          // 可以通过请求体、响应体、代理配置、返回 false 跳过代理
+          return false
+        }
+    }]
   },
   module: {
     rules: [

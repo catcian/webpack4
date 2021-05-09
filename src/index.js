@@ -15,6 +15,7 @@ class App extends React.Component {
     .then(resp => {
       console.log(resp)
     })
+    axios.get('/auth').catch(error => console.log(error))
   }
 
   handleClick() {
