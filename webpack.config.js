@@ -11,7 +11,10 @@ module.exports = {
     contentBase: './dist',
     port: 3000,
     hot: true,
-    hotOnly: true
+    hotOnly: true,
+    proxy: {
+      '/react/api': 'http://www.dell-lee.com',
+    }
   },
   module: {
     rules: [

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import axios from 'axios'
 
 class App extends React.Component {
 
@@ -7,6 +8,13 @@ class App extends React.Component {
     super(props)
     this.state = {count: 0}
     this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount() {
+    axios.get('/react/api/header.json')
+    .then(resp => {
+      console.log(resp)
+    })
   }
 
   handleClick() {
