@@ -1,33 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
+import { BrowserRouter, Route} from 'react-router-dom'
+import Home from './home'
+import List from './list'
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {count: 0}
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  componentDidMount() {
-    axios.get('/react/api/header.json')
-    .then(resp => {
-      console.log(resp)
-    })
-    axios.get('/auth').catch(error => console.log(error))
-  }
-
-  handleClick() {
-    this.setState({count: this.state.count + 1})
-  }
 
   render() {
     return (
-      <div>
-        <h1>count: {this.state.count}</h1>
-        <button onClick={this.handleClick}>+</button>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/list" exact component={List}></Route>
+        </div>
+      </BrowserRouter>
     )
   }
 }

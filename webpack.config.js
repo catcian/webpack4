@@ -13,10 +13,7 @@ module.exports = {
     port: 3000,
     hot: true,
     hotOnly: true,
-    headers: {
-      host: "http://8.129.91.9",
-      cookie: 'cookie'
-    },
+    historyApiFallback: true,
     proxy: [{
         context: ['/auth', '/react/api'],
         target: 'http://www.dell-lee.com',
