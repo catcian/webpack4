@@ -1,14 +1,20 @@
-console.log('hello Progressive Web Application')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './home'
+import List from './list'
 
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-    .then(registration => {
-      console.log('service-worker registed')
-    })
-    .catch(error => {
-      console.log('service-worker registe error')
-    })
-  })
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Route path="/" exact component={Home} />
+          <Route path="/list" exact component={List} />
+        </div>
+      </BrowserRouter>
+    )
+  }
 }
+
+ReactDOM.render(<App />, document.getElementById('root'))
