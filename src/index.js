@@ -1,26 +1,17 @@
 // import '@babel/polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Child from './child'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {count: 0}
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick() {
-    this.setState(prevState => ({count: prevState.count + 1}))
-    this.setState(prevState => ({count: prevState.count + 1}))
-  }
-  render() {
-    return(
+class Home extends React.Component {
+  render () {
+    return (
       <div>
-        <h1>count: {this.state.count}</h1>
-        <button onClick={this.handleClick}>+</button>
+        <div>This is Home</div>
+        <Child></Child>
       </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Home />, document.getElementById('root'))
